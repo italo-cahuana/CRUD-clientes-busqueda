@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS de Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>LocalStorage 2</title>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-10">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="mb-4 text-center">Crea, edita y elimina Clientes</h2>
+                        
+                        <!-- Formulario con floating labels -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtUsers" placeholder=" ">
+                            <label for="txtUsers">Usuario</label>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="txtNumber" placeholder=" ">
+                            <label for="txtNumber">Número</label>
+                        </div>
+                        
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="txtNotas" placeholder=" ">
+                            <label for="txtNotas">Nota</label>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-4">
+                            <!-- Botón original (modo agregar) -->
+                            <button id="btnAgregar" class="btn btn-primary px-4">Agregar Usuario</button>
+                            
+                            <!-- Nuevos botones (modo edición - ocultos inicialmente) -->
+                            <button id="btnGuardar" class="btn btn-success px-4" style="display: none;">Guardar Cambios</button>
+                            <button id="btnCancelar" class="btn btn-outline-secondary px-4" style="display: none;">Cancelar</button>
+                            
+                            <!-- Botón existente -->
+                            <button id="btnEliminar" class="btn btn-outline-danger px-4">Eliminar Todo</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Div de busqueda -->
+                <div class="input-group mb-3 mt-4">
+                    <input type="text" id="inputBusqueda" class="form-control" placeholder="Buscar por nombre, número o nota...">
+                </div>
+                
+                <!-- Lista de resultados -->
+                <div id="lista" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JS de Bootstrap 5.3 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
